@@ -16,11 +16,11 @@ app.config(function($locationProvider, $stateProvider) {
   .state('home', {
     url: '/',
     templateUrl: 'views/home.html',
-    controller: require('./controllers/TestCtrl').inject(app)
+    controller: require('./controllers/ExampleCtrl').inject(app)
   })
   .state('second', {
     url: '/aap',
-    controller: require('./controllers/TestCtrl').inject(app),
+    controller: require('./controllers/ExampleCtrl').inject(app),
     templateUrl: 'views/secondary.html'
   });
 
