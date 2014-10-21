@@ -1,3 +1,13 @@
 body {
-  background: #FFF;
+  background: #EEE;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  &:hover {
+    color: #000;
+    text-decoration: underline;
+  }
 }
