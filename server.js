@@ -5,10 +5,15 @@ var morgan = require('morgan'); 			// log requests to the console (express4)
 var bodyParser = require('body-parser'); 	// pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
-var livereload = require('connect-livereload');
+// Determin config
+var env = process.env.NODE_ENV || 'development';
 
-// Only do this for DEV environment
-app.use(livereload({port: 35729}));
+// Insert LiveReload snippet when in dev mode
+if(env === 'development') {
+	console.log('dev env');
+	var livereload = require('connect-livereload');
+	app.use(livereload({port: 35729}));
+}
 
 app.use(express.static(__dirname + '/public')); 				// set the static files location /public/img will be /img for users
 app.use(morgan('dev')); 										// log every request to the console
@@ -21,9 +26,7 @@ app.get('*', function(req, res) {
 	res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
 });
 
-// listen (start app with node server.js) ======================================
 if(!module.parent) {
 	server = app.listen(8080);
 	console.log("App listening on port 8080");
 }
-
