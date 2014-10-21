@@ -1,7 +1,6 @@
 'use strict';
 
 exports.inject = function(app) {
-  // require('./../services/Auth').inject(app);
   require('./../directives/TestDirective').inject(app);
   app.controller('TestCtrl', exports.controller);
   return exports.controller;

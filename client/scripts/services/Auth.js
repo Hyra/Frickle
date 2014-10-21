@@ -7,13 +7,13 @@ exports.inject = function(app) {
 
 exports.factory = function() {
 
-  var variabele = 'initital';
+  var variabele = 'Default value';
 
   return {
-    setVal: function(val) {
+    setValue: function(val) {
       variabele = val;
     },
-    getVal: function() {
+    getValue: function() {
       return variabele;
     }
   };
