@@ -10,7 +10,7 @@ var env = process.env.NODE_ENV || 'development';
 
 // Insert LiveReload snippet when in dev mode
 if(env === 'development') {
-	console.log('dev env');
+	console.log('App running in development environment');
 	var livereload = require('connect-livereload');
 	app.use(livereload({port: 35729}));
 }
