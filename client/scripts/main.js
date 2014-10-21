@@ -6,7 +6,7 @@ var uiRoute = require('angular-ui-router');
 var app = angular.module('MyApp', [uiRoute]);
 
 require('./services/Auth').inject(app);
-require('./directives/TestDirective').inject(app);
+require('./directives/ExampleDirective').inject(app);
 
 app.config(function($locationProvider, $stateProvider) {
 
