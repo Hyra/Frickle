@@ -1,13 +1,13 @@
 'use strict';
 
 exports.inject = function(app) {
-  app.directive('myCustomers', exports.directive);
+  app.directive('myDirective', exports.directive);
   return exports.directive;
 };
 
 exports.directive = function() {
   return {
     restrict: 'E',
-    template: 'Namssse: {{customer.name}} Address: {{customer.address}}'
+    template: '<ul><li><em>A simple list</em></li><li><em>But I can be anything you want.</em></li></ul>'
   };
 };
