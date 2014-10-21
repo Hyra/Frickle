@@ -1,6 +1,3 @@
-// server.js
-
-// set up ========================
 var express  = require('express');
 var app      = express(); 								// create our app w/ express
 var mongoose = require('mongoose'); 					// mongoose for mongodb
@@ -10,11 +7,7 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 
 var livereload = require('connect-livereload');
 
-// configuration =================
-
-// mongoose.connect('mongodb://node:node@mongo.onmodulus.net:27017/uwO3mypu'); 	// connect to mongoDB database on modulus.io
-
-// Only do this for DEV
+// Only do this for DEV environment
 app.use(livereload({port: 35729}));
 
 app.use(express.static(__dirname + '/public')); 				// set the static files location /public/img will be /img for users
