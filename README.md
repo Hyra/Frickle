@@ -28,7 +28,7 @@ A sensible default app that ..
   	- cleaning the build folder
   	- jshinting your beautiful code
 
-and comes with an example controller, service, directive and stateprovider so you can see how things work together.
+It comes with an example controller, service, directive and stateprovider so you can see how things work together.
 
 ## Roadmap
 
