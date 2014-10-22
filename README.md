@@ -10,7 +10,7 @@ Boilerplate App for building Apps with Mongoose, SASS, Angular, Gulp, Browserify
 - npm install
 - gulp
 
-That's it. Now visit [http://localhost:8080](http://localhost:8080)
+That's it. Now visit [http://localhost:8080](http://localhost:8080) and profit.
 
 ## What's in the box
 
