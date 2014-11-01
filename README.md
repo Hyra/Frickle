@@ -17,7 +17,7 @@ That's it. Now visit [http://localhost:8080](http://localhost:8080) and profit.
 A sensible default app that ..
 
   - uses Browserify to build the client code from the `client` to the `public` folder
-  - uses $stateProvider for the (HTML5 PushState supported) routing
+  - uses *$stateProvider* for the (HTML5 PushState supported) routing
   - uses SASS as pre processor
   - uses an EditorConfig file for everyone to enjoy
   - uses a .jshintrc
