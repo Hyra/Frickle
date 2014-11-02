@@ -8,7 +8,7 @@ var methodOverride = require('method-override');
 
 // Determin config
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-require('./api/config.js');
+var config = require('./api/config.js');
 
 // Our app
 var app = express();
@@ -36,6 +36,6 @@ app.get('*', function(req, res) {
 });
 
 if(!module.parent) {
-  app = app.listen(8080);
+  app = app.listen(config.port);
   console.log('App listening on port 8080');
 }
