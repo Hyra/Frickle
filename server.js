@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
 // Determin config
-var env = process.env.NODE_ENV || 'development';
+var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+require('./api/config.js');
 
 // Our app
 var app = express();
