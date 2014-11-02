@@ -26,6 +26,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(methodOverride());
 
+// API Routes
+require('./api/routes')(app);
+
 // HTML5 Pushstate mode
 app.get('*', function(req, res) {
   res.sendfile('./public/index.html');
