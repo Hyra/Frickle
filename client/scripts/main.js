@@ -19,7 +19,7 @@ app.config(function($locationProvider, $stateProvider) {
     controller: require('./controllers/ExampleCtrl').inject(app)
   })
   .state('second', {
-    url: '/aap',
+    url: '/second-page',
     controller: require('./controllers/ExampleCtrl').inject(app),
     templateUrl: 'views/secondary.html'
   });
