@@ -7,11 +7,11 @@ exports.inject = function(app) {
 
 exports.factory = function() {
 
-  var variabele = 'Default value';
+  var variabele = 'Default Service Value';
 
   return {
     setValue: function(val) {
-      variabele = val;
+      variabele = val + ' - ' + Math.ceil(Math.random() * 1000);
     },
     getValue: function() {
       return variabele;
