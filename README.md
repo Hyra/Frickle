@@ -1,7 +1,6 @@
-Frickle
-=======
+# Frickle
 
-Boilerplate App for building Apps with Mongoose, SASS, Angular, Gulp, Browserify and Express.
+A Boilerplate App for building Apps with Mongoose, SASS, Angular, Gulp, Browserify and Express.
 
 ## Installation
 
@@ -18,18 +17,20 @@ A sensible default app that ..
 
   - uses Browserify to build the client code from the `client` to the `public` folder
   - uses **$stateProvider** for the (HTML5 PushState supported) routing
-  - uses SASS as pre processor
-  - uses an EditorConfig file for everyone to enjoy
-  - uses a .jshintrc
-  - uses Gulp as build tool that does:
+  - uses **SASS** as pre processor
+  - uses an **.editorConfig** file for everyone to enjoy
+  - uses a **.jshintrc**
+  - uses **Gulp** as build tool that does:
   	- view compiling
   	- sass conversion
   	- browserify-ing all teh things
   	- cleaning the build folder
   	- jshinting your beautiful code
 
-It comes with an example controller, service, directive and stateprovider so you can see how things work together.
+It comes with an example controller, service, directive and two states using stateprovider so you can see how things work together.
 
-## Roadmap
+## API
 
-Once satisfied with the client wiring I will add an Express backed API structure up along with CORS and Mongoose. Until then, feel free to send in PRs or normal requests if you feel you miss something.
+In `server.js` you will notice an **USE_API** flag you can set. When you set this to true, Frickle will automatically load all your models that live in `api/models`, connect to your MongoDB based on your ENV settings and load up the API routes from `api/routes.js`.
+
+There's an example API Controller with corresponding Model so you can start building straight away.
