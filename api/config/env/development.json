@@ -1,3 +1,4 @@
 {
+  "db": "mongodb://localhost/your-development-db",
   "port": 8080
 }
