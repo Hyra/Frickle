@@ -9,7 +9,7 @@ var methodOverride = require('method-override');
 
 // Determin config
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
-var config = require('./api/config.js');
+var config = require('./api/config');
 
 // Do we want to use our internal Express API?
 var USE_API = true;
