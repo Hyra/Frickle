@@ -5,16 +5,27 @@ exports.inject = function(app) {
   return exports.factory;
 };
 
-exports.factory = function() {
+exports.factory = function($http) {
 
-  var variabele = 'Default Service Value';
+  var sdo = {
+    isLoggedIn: false,
+    username: ''
+  };
+
+  var _urls = {
+    auth: '/api/login',
+    signup: '/api/signup'
+  };
 
   return {
-    setValue: function(val) {
-      variabele = val + ' - ' + Math.ceil(Math.random() * 1000);
+    login: function(data) {
+      return $http.post(_urls.auth, data);
     },
-    getValue: function() {
-      return variabele;
+    signup: function(data) {
+      return $http.post(_urls.signup, data);
+    },
+    setLoggedIn: function(bool) {
+      sdo.isLoggedIn = bool;
     }
   };
 
