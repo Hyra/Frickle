@@ -82,7 +82,7 @@ if(USE_API) {
 
 // HTML5 Pushstate mode
 app.get('*', function(req, res) {
-  res.sendFile('./public/index.html');
+  res.sendFile(path.join(__dirname, '/public', 'index.html'));
 });
 
 if(!module.parent) {
