@@ -14,10 +14,10 @@ module.exports = function(app, passport) {
     failureFlash : true
   }));
   app.get('/api/signup/error', function(req, res) {
-    res.send(401, {error: req.flash('signupMessage')});
+    res.status(401).send({error: req.flash('signupMessage')});
   });
   app.get('/api/signup/success', function(req, res) {
-    res.send(200, {user: req.user});
+    res.status(200).send({user: req.user});
   });
 
   // Log in route
@@ -27,10 +27,10 @@ module.exports = function(app, passport) {
     failureFlash : true
   }));
   app.get('/api/login/error', function(req, res) {
-    res.send(401, {error: req.flash('loginMessage')});
+    res.status(401).send({error: req.flash('loginMessage')});
   });
   app.get('/api/login/success', function(req, res) {
-    res.send(200, {user: req.user});
+    res.status(200).send({user: req.user});
   });
 
 };
