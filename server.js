@@ -82,10 +82,10 @@ if(USE_API) {
 
 // HTML5 Pushstate mode
 app.get('*', function(req, res) {
-  res.sendfile('./public/index.html');
+  res.sendFile('./public/index.html');
 });
 
 if(!module.parent) {
   app = app.listen(config.port);
-  console.log('App listening on port 8080');
+  console.log('App listening on port ' + config.port);
 }
