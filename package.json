@@ -5,6 +5,9 @@
   "main": "server.js",
   "author": "Stef van den Ham <stef@mindthecode.com>",
   "repository": "https://github.com/Hyra/frickle.git",
+  "engines" : { 
+    "node" : "0.12" 
+  },
   "dependencies": {
     "angular": "~1.3.0",
     "angular-ui-router": "~0.2.11",
