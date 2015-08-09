@@ -10,6 +10,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var methodOverride = require('method-override');
 var session = require('express-session');
+var path = require('path'); 
 
 // Determin config
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
